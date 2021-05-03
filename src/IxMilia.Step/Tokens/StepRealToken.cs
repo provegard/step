@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace IxMilia.Step.Tokens
 {
     internal class StepRealToken : StepToken
@@ -14,7 +16,7 @@ namespace IxMilia.Step.Tokens
 
         public override string ToString()
         {
-            return Value.ToString("0.0#");
+            return Value.ToString("0.0#", CultureInfo.InvariantCulture);
         }
     }
 }
